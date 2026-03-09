@@ -1,0 +1,137 @@
+/* GLOBAL NIGHTMARE SETTINGS */
+body {
+    background-color: #00FF00; /* Blinding neon green */
+    background-image: url('https://www.transparenttextures.com/patterns/comic-bg.png'); /* Noisy repeating background */
+    cursor: crosshair; /* Aggressive mouse cursor */
+    font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+    color: #FF00FF; /* Hot pink text on neon green */
+    margin: 15px;
+    padding: 5%;
+}
+
+/* THE CONTAINER OF DOOM */
+#chaos-container {
+    background-color: yellow;
+    border: 15px dotted red;
+    padding: 2px;
+    box-shadow: 30px 30px 50px blue, inset -20px -20px 40px purple; /* Conflicting inner and outer neon shadows */
+}
+
+/* TYPOGRAPHY ASSAULT */
+h1 {
+    font-family: Impact, fantasy;
+    font-size: 6rem;
+    color: red;
+    text-transform: uppercase;
+    letter-spacing: -5px; /* Squished letters */
+    word-spacing: 50px; /* Massive gaps between words */
+    text-shadow: 5px 5px 0px lime, -5px -5px 0px cyan; /* Double 3D shadow effect */
+    text-decoration: underline overline wavy blue; /* Every line possible */
+}
+
+h2 {
+    font-family: Papyrus, "Times New Roman", serif;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 4vw; /* Scales terribly with the window */
+    color: white;
+    background-color: black;
+    padding: 10px;
+    text-align: right; /* Unjustified right alignment */
+    border-radius: 50%; /* Makes the background an awkward oval */
+}
+
+/* NAVIGATION THAT HURTS TO USE */
+nav ul {
+    list-style-type: upper-roman; /* Roman numerals instead of bullets */
+    background-color: orange;
+    padding: 50px;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin: 5px;
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: lowercase;
+}
+
+nav a {
+    color: #0000FF; /* Pure blue unvisited link color */
+    text-decoration: line-through; /* Crossed out links */
+    transition: all 0.2s ease-in-out;
+}
+
+nav a:hover {
+    color: #FF0000;
+    font-size: 60px; /* Expands massively on hover, breaking layout */
+    background-color: black;
+    text-decoration: none;
+    letter-spacing: 10px;
+    cursor: wait; /* Changes cursor to a loading hourglass */
+}
+
+/* THE RAINBOW ZONE */
+.rainbow-nightmare {
+    text-align: justify;
+    border: 10px double fuchsia;
+    margin: 40px;
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    padding: 20px;
+}
+
+.awful-text {
+    font-family: "Courier New", monospace;
+    letter-spacing: 15px; /* Way too much space between letters */
+    word-spacing: -10px; /* Words overlapping each other */
+    line-height: 0.8; /* Lines overlapping each other */
+    text-transform: capitalize;
+    color: maroon;
+    font-weight: bold;
+    margin: 50px;
+}
+
+/* ASSET STYLING */
+.cursed-image {
+    width: 250px;
+    height: 400px; /* Distorted aspect ratio */
+    border: 12px solid cyan;
+    border-radius: 30px 0 80px 0; /* Irregular corners */
+    box-shadow: 15px -15px 5px rgba(255,0,0,0.8);
+    transition: transform 3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.cursed-image:hover {
+    transform: rotate(1080deg) scale(2.5) skewX(20deg); /* Spins, grows, and skews wildly */
+}
+
+/* TERRIBLE TABLE */
+table {
+    width: 100%;
+    background-color: #ffb6c1; /* Light pink */
+    border-spacing: 25px; /* Huge gaps between cells */
+    empty-cells: hide;
+}
+
+td {
+    border: 8px dashed green;
+    padding: 30px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: darkblue;
+}
+
+/* BLINKING TEXT HACK (since <blink> is deprecated, we force it with CSS) */
+.blinking-text {
+    animation: blinker 0.1s linear infinite; /* Seizure-inducing blink speed */
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    font-family: monospace;
+}
+
+@keyframes blinker {
+    50% { opacity: 0; }
+}
