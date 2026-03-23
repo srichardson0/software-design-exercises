@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FRETBOARD</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="app">
+
+    <header>
+      <div>
+        <div class="title">Fretboard</div>
+        <div class="subtitle">Draft Hypertext Narrative</div>
+      </div>
+      <div class="progress">nodes visited: <span id="visitCount">0</span> / <span id="totalCount">0</span></div>
+    </header>
+
+    <div class="main">
+      <div class="fretboard-panel">
+        <div class="tuning-row" id="fretLabels"></div>
+        <div class="fretboard" id="fretboard">
+          <div class="nut"></div>
+          <div class="fret-lines" id="fretLines"></div>
+          <div id="strings"></div>
+        </div>
+      </div>
+
+      <div class="content-panel" id="contentPanel">
+        <div class="content-empty" id="emptyState">
+          <div class="glyph">♩</div>
+          <div class="hint">touch a node<br>to begin</div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="legend">
+        <div class="legend-item"><div class="legend-dot l-unvisited"></div> unread</div>
+        <div class="legend-item"><div class="legend-dot l-visited"></div> visited</div>
+        <div class="legend-item"><div class="legend-dot l-active"></div> current</div>
+      </div>
+      <button class="back-btn" id="backBtn" disabled onclick="goBack()">← back</button>
+    </footer>
+
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
