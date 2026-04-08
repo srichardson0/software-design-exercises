@@ -6,16 +6,17 @@
   <title>FRETBOARD</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
 </head>
 <body>
   <div class="app">
 
     <header>
       <div>
-        <div class="title">Fretboard</div>
-        <div class="subtitle">Draft Hypertext Narrative</div>
+        <div class="title">Fretboard Atlas</div>
+        <div class="subtitle">Where guitar legends and sonic stories intersect</div>
       </div>
-      <div class="progress">nodes visited: <span id="visitCount">0</span> / <span id="totalCount">0</span></div>
+      <div class="progress">notes visited: <span id="visitCount">0</span> / <span id="totalCount">0</span></div>
     </header>
 
     <div class="main">
@@ -26,23 +27,38 @@
           <div class="fret-lines" id="fretLines"></div>
           <div id="strings"></div>
         </div>
+        <div class="volume-hint">
+          <span class="speaker-icon glyph">🔊</span>
+          <span>Volume up!</span>
+        </div>
       </div>
 
       <div class="content-panel" id="contentPanel">
         <div class="content-empty" id="emptyState">
           <div class="glyph">♩</div>
-          <div class="hint">touch a node<br>to begin</div>
+          <div class="hint">touch a note<br>to begin</div>
+        </div>
+        <div class="node-content" id="nodeContent" style="display: none;">
+          <div class="node-media" id="nodeMedia"></div>
+          <div class="node-coord" id="nodeCoord"></div>
+          <div class="node-title" id="nodeTitle"></div>
+          <div class="node-body" id="nodeBody"></div>
+          <div class="links-label">related notes</div>
+          <div class="node-links" id="nodeLinks"></div>
         </div>
       </div>
     </div>
 
     <footer>
-      <div class="legend">
-        <div class="legend-item"><div class="legend-dot l-unvisited"></div> unread</div>
-        <div class="legend-item"><div class="legend-dot l-visited"></div> visited</div>
-        <div class="legend-item"><div class="legend-dot l-active"></div> current</div>
+      <div class="footer-top">
+        <div class="legend">
+          <div class="legend-item"><div class="legend-dot l-unvisited"></div> unread</div>
+          <div class="legend-item"><div class="legend-dot l-visited"></div> visited</div>
+          <div class="legend-item"><div class="legend-dot l-active"></div> current</div>
+        </div>
+        <button class="back-btn" id="backBtn" disabled onclick="goBack()">← back</button>
       </div>
-      <button class="back-btn" id="backBtn" disabled onclick="goBack()">← back</button>
+      <div class="footnote">By Sasha Richardson</div>
     </footer>
 
   </div>

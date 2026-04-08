@@ -1,7 +1,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --wood-dark: #1a0f06;
+  --wood-dark: #1a0f06b2;
   --wood-mid: #2d1a0a;
   --wood-light: #4a2c10;
   --fret-silver: #8a7e6e;
@@ -56,7 +56,7 @@ header {
 
 .title {
   font-family: 'Playfair Display', serif;
-  font-size: 13px;
+  font-size: 22px;
   font-weight: 400;
   font-style: italic;
   letter-spacing: 0.18em;
@@ -65,7 +65,7 @@ header {
 }
 
 .subtitle {
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: 0.3em;
   color: var(--text-dim);
   text-transform: uppercase;
@@ -81,7 +81,7 @@ header {
 /* ── MAIN LAYOUT ── */
 .main {
   display: grid;
-  grid-template-columns: 1fr 340px;
+  grid-template-columns: 1fr 400px;
   gap: 0;
   overflow: hidden;
   padding: 28px 0;
@@ -94,6 +94,20 @@ header {
   gap: 20px;
   padding-right: 32px;
   border-right: 1px solid #2a1808;
+}
+
+.volume-hint {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.speaker-icon {
+  font-size: 12px;
 }
 
 .tuning-row {
@@ -232,10 +246,6 @@ header {
   transition: all 0.18s ease;
   position: relative;
   display: flex; align-items: center; justify-content: center;
-  z-index: 2;
-}
-
-.node.hub {
   width: 22px; height: 22px;
 }
 
@@ -301,6 +311,28 @@ header {
 
 .node-content {
   animation: fadeSlide 0.35s ease forwards;
+}
+
+.node-media {
+  margin-bottom: 20px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.node-media img,
+.node-media video,
+.node-media iframe {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.node-media iframe {
+  aspect-ratio: 16 / 9;
+  height: auto;
+  min-height: 200px;
 }
 
 @keyframes fadeSlide {
@@ -393,6 +425,12 @@ footer {
   padding: 12px 0 16px;
   border-top: 1px solid #2a1808;
   display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-top {
+  display: flex;
   align-items: center;
   justify-content: space-between;
 }
@@ -401,6 +439,13 @@ footer {
   display: flex;
   gap: 20px;
   align-items: center;
+}
+
+.footnote {
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  color: var(--text-dim);
+  font-style: italic;
 }
 
 .legend-item {
