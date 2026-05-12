@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVERMORE — the mirror room</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Impact&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body class="room room-about">
+    <header class="room-header">
+        <span class="brand">EVERMORE</span>
+        <span class="room-name">▢ THE MIRROR ROOM</span>
+        <span class="open-light"><span class="dot"></span> quiet</span>
+    </header>
+
+    <main class="about-main">
+        <article class="manifesto">
+            <h2>you are inside the store</h2>
+            <p>EVERMORE is not a website. it is a small piece of the larger
+            feeling you have already been carrying around: <strong>things are
+            asking to be bought, that wanting is the same as needing, that
+            the cart is a place where you live.</strong></p>
+
+            <p>on <a href="shop.html">the floor</a>, products accumulate
+            because you are there. you do not click them. you do not request
+            them. they simply arrive, the way a banner ad arrives, the way an
+            email arrives, the way a friend's haul-video arrives. the strobing
+            ADD TO CART buttons do not exist to be clicked. they exist to
+            make you tired.</p>
+
+            <p>at <a href="checkout.html">the counter</a>, every item you
+            brushed past is read back to you with a price attached. there is
+            no refund. there is no undo. but the store remains open, and the
+            doors remain unlocked, and you can <a href="shop.html">go back
+            in</a> whenever you would like to.</p>
+
+            <p class="manifesto-close">that is the trick of it.</p>
+        </article>
+
+        <aside class="visit-stats" id="visit-stats">
+            <h3>the mirror</h3>
+            <p>items collected across all visits<span class="r-dots"></span><span id="stat-items">0</span></p>
+            <p>checkouts completed<span class="r-dots"></span><span id="stat-checkouts">0</span></p>
+            <p>cumulative spend<span class="r-dots"></span><span id="stat-spend">$0.00</span></p>
+            <p class="stats-note" id="stats-note">you have not bought anything yet. that will change.</p>
+            <button class="stats-reset" id="stats-reset" type="button">forget my visits</button>
+        </aside>
+
+        <p class="about-credit">
+            a piece about overconsumption shopping. all product imagery is fetched
+            from <a href="https://dummyjson.com" target="_blank" rel="noopener">dummyjson</a>;
+            none of it is real, all of it is wanting.
+        </p>
+    </main>
+
+    <nav class="room-exits room-exits--centered">
+        <a href="index.html" class="exit-link">↩ back to the entrance</a>
+        <a href="shop.html" class="exit-link">↻ keep shopping anyway</a>
+    </nav>
+
+    <footer class="room-footer">
+        <a href="index.html">entrance</a>
+        <span class="footer-mid">the store is always open</span>
+        <a href="shop.html">the floor</a>
+    </footer>
+
+    <script src="shared.js"></script>
+    <script>EVERMORE.renderStats();</script>
+</body>
+</html>

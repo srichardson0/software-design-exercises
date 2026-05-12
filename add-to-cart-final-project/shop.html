@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVERMORE — the floor</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Impact&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body class="room room-shop">
+    <div id="canvas"></div>
+
+    <div id="ui-layer">
+        <button id="checkout-btn">Checkout</button>
+        <div id="reset-msg">Transaction Complete.</div>
+    </div>
+
+    <header class="room-header room-header--overlay">
+        <span class="brand">EVERMORE</span>
+        <span class="room-name">▢ THE FLOOR</span>
+        <span class="cart-counter" id="cart-counter">0 items in your hands</span>
+    </header>
+
+    <nav class="room-exits">
+        <a href="index.html" title="back to entrance">← exit</a>
+        <a href="about.html" title="about EVERMORE">↗ about</a>
+    </nav>
+
+    <div class="floor-hint" id="floor-hint">move around the floor</div>
+
+    <script src="shared.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

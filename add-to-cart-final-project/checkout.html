@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVERMORE — the counter</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Impact&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body class="room room-checkout">
+    <header class="room-header">
+        <span class="brand">EVERMORE</span>
+        <span class="room-name">▢ THE COUNTER</span>
+        <span class="open-light"><span class="dot"></span> processing</span>
+    </header>
+
+    <main class="receipt-main">
+        <div class="receipt" id="receipt">
+            <div class="receipt-head">
+                <h2>EVERMORE</h2>
+                <p>thank you for your patronage</p>
+                <p class="receipt-date" id="receipt-date"></p>
+            </div>
+            <div class="dotted-line"></div>
+            <ul class="receipt-items" id="receipt-items"></ul>
+            <div class="dotted-line"></div>
+            <div class="receipt-totals">
+                <p><span>items</span><span class="r-dots"></span><span id="item-count">0</span></p>
+                <p class="receipt-total"><span>TOTAL</span><span class="r-dots"></span><span id="receipt-total">$0.00</span></p>
+            </div>
+            <div class="receipt-foot">
+                <p>this transaction will not be refunded.</p>
+                <p>the store is always open.</p>
+                <p class="barcode-foot"></p>
+            </div>
+        </div>
+    </main>
+
+    <nav class="room-exits room-exits--centered">
+        <a href="shop.html" class="exit-link">↻ return to the floor</a>
+        <a href="about.html" class="exit-link">↗ step into the mirror room</a>
+    </nav>
+
+    <footer class="room-footer">
+        <a href="index.html">entrance</a>
+        <span class="footer-mid">your receipt cannot be returned</span>
+        <a href="about.html">about</a>
+    </footer>
+
+    <script src="shared.js"></script>
+    <script src="checkout.js"></script>
+</body>
+</html>

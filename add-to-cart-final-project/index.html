@@ -3,18 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add to Cart</title>
+    <title>EVERMORE — please come in</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Impact&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div id="canvas"></div>
-    
-    <div id="ui-layer">
-        <button id="checkout-btn">Checkout</button>
-        <div id="reset-msg">Transaction Complete.</div>
+<body class="room room-lobby">
+    <div class="ambient-bg" aria-hidden="true">
+        <span class="drift drift-1">$</span>
+        <span class="drift drift-2">$</span>
+        <span class="drift drift-3">$</span>
+        <span class="drift drift-4">$</span>
+        <span class="drift drift-5">$</span>
+        <span class="barcode barcode-1"></span>
+        <span class="barcode barcode-2"></span>
+        <span class="barcode barcode-3"></span>
     </div>
 
-    <script src="script.js"></script>
+    <header class="room-header">
+        <span class="brand">EVERMORE</span>
+        <span class="room-name">▢ THE ENTRANCE</span>
+        <span class="open-light"><span class="dot"></span> open</span>
+    </header>
+
+    <main class="lobby-main">
+        <div class="lobby-logo">
+            <h1>EVERMORE</h1>
+            <p class="tagline">a department store of the eternal sale</p>
+            <p class="hours">open 24 / 7 / forever</p>
+        </div>
+
+        <a href="shop.html" class="door-link">
+            <span class="door-frame">
+                <span class="door-label">ENTER</span>
+                <span class="door-sub">push to begin shopping</span>
+            </span>
+        </a>
+
+        <p class="lobby-fineprint">
+            by entering, you agree to want things<br>
+            you did not know you needed.
+        </p>
+    </main>
+
+    <footer class="room-footer">
+        <a href="about.html">about the store</a>
+        <span class="footer-mid">we are always here</span>
+        <a href="shop.html">begin</a>
+    </footer>
+
+    <script src="shared.js"></script>
 </body>
 </html>
